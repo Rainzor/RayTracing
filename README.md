@@ -20,18 +20,20 @@ Basic code framework for this project (Complete).
 
 ## Rendering Result
 
+<center><p>Figure 1: Only direct light</p></center>
 <img src="./images/img-path-tracing/rst_dir.png" style="zoom:50%;" />
-<center><p>Figure 1: Only direct light</p></center>    
+    
 
-
+<center><p>Figure 2: Global Illumination</p></center>  
 <img src="./images/img-path-tracing/rst_full.png" style="zoom:50%;" />
-<center><p>Figure 2: Global Illumination</p></center>   
-
-<img src="./images/img-path-tracing/rst_full_impSamp.png" style="zoom:50%;" />
+ 
+ 
 <center><p>Figure 3: Global Illumination by important sampling</p></center>  
+<img src="./images/img-path-tracing/rst_full_impSamp.png" style="zoom:50%;" />
 
-<img src="./images/img-path-tracing/rst_high_spp.png" style="zoom:50%;" />
+
 <center><p>Figure 4: Global Illumination with high spp</p></center>  
+<img src="./images/img-path-tracing/rst_high_spp.png" style="zoom:50%;" />
 
 
 ## Reference
