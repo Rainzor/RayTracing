@@ -208,14 +208,16 @@ $$
 p(\pmb{\omega} _ {i})=\frac{wh}{2\pi^2\sin\theta}p _ {\text{img}}(i,j)\tag9
 $$
 此时 *equation 6*可改写为：
+
 $$
 \begin{aligned}
-L _ {\text{dir}}(\pmb{p},\pmb{\omega} _ {o})&=\int _ A f _ {r}(\pmb{y}\to \pmb{x}\to\pmb{z})L _ {e}(\pmb{y}\to\pmb{x})G(\pmb{x}\leftrightarrow\pmb{y})\mathbb{d}A(\pmb{y})
-\\&=\int _ {\mathcal{H}^2}\frac{ f _ {r}(\pmb{p},\pmb{\omega} _ {i},\pmb{\omega} _ {o})L_i(\pmb{p},\pmb{\omega} _ {i})\cos\theta _ {\pmb{\omega} _ {i},\pmb{n}(\pmb{p})}}{p(\pmb{\omega} _ {i})}\times p(\pmb{\omega} _ {i})\mathbb{d}\pmb{\omega} _ {i}
-\\&=\int _ {I}\frac{ f _ {r}(\pmb{p},\pmb{\omega} _ {i},\pmb{\omega} _ {o})L_e(\pmb{p},\pmb{\omega} _ {i})\cos\theta _ {\pmb{\omega} _ {i},\pmb{n}(\pmb{p})}}{p(\pmb{\omega} _ {i})}\times p _ {\text{img}}(i,j)\mathbb{d}i\mathbb{d}j
-\\&=\sum_{I_{i,j}}\frac{ f _ {r}(\pmb{p},\pmb{\omega} _ {i},\pmb{\omega} _ {o})L_e(\pmb{p},\pmb{\omega} _ {i})\cos\theta _ {\pmb{\omega} _ {i},\pmb{n}(\pmb{p})}}{p _ {\text{img}}(i,j)}\times \frac{2\pi^2\sin\theta}{wh}
+L _ {\text{dir}}(\pmb{p},\pmb{\omega} _ {o})&=\int _ A f _ {r}(\pmb{y}\to \pmb{x}\to\pmb{z})L _ {e}(\pmb{y}\to\pmb{x})G(\pmb{x}\leftrightarrow\pmb{y})\mathbb{d}A(\pmb{y})\\
+&=\int _ {\mathcal{H}^2}\frac{ f _ {r}(\pmb{p},\pmb{\omega} _ {i},\pmb{\omega} _ {o})L_i(\pmb{p},\pmb{\omega} _ {i})\cos\theta _ {\pmb{\omega} _ {i},\pmb{n}(\pmb{p})}}{p(\pmb{\omega} _ {i})}\times p(\pmb{\omega} _ {i})\mathbb{d}\pmb{\omega} _ {i}\\
+&=\int _ {I}\frac{ f _ {r}(\pmb{p},\pmb{\omega} _ {i},\pmb{\omega} _ {o})L_e(\pmb{p},\pmb{\omega} _ {i})\cos\theta _ {\pmb{\omega} _ {i},\pmb{n}(\pmb{p})}}{p(\pmb{\omega} _ {i})}\times p _ {\text{img}}(i,j)\mathbb{d}i\mathbb{d}j\\
+&=\sum_{I_{i,j}}\frac{ f _ {r}(\pmb{p},\pmb{\omega} _ {i},\pmb{\omega} _ {o})L_e(\pmb{p},\pmb{\omega} _ {i})\cos\theta _ {\pmb{\omega} _ {i},\pmb{n}(\pmb{p})}}{p _ {\text{img}}(i,j)}\times \frac{2\pi^2\sin\theta}{wh}
 \end{aligned}\tag{10}
 $$
+
 其中求和是按照重要性采样得到的分布 $p _ {img}(i,j) $ 去离散采样。
 
 #### Alias Method
@@ -230,9 +232,9 @@ $$
 
 2. 修改概率分布表， $U(b) = U(b) - (1 - U(a))$；修改别名表，$K_k=b$
 
-3. 如果 $U(b)<1$，则向A队列加入b元素 $A.push(b)$
+3. 如果 $ U(b) < 1 $，则向A队列加入b元素 $A.push(b)$
 
-   如果 $U(b)>1$，则向B队列加入b元素 $B.pushback(b)$
+   如果 $ U(b) > 1 $，则向B队列加入b元素 $B.pushback(b)$
 
 4. 如果 A,B为空，则结束；否则返回 step 1
 
