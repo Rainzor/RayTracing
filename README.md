@@ -1,4 +1,4 @@
-# 9. Path Tracing
+# 9. Ray Tracing
 
 > Rainzor
 
@@ -18,79 +18,22 @@ Requirements and some auxiliary materials for this assignment.
 
 Basic code framework for this project (Complete).
 
-## Result
+## Rendering Result
 
-<center>
-    <img style = "
-        border-radius: 0.3125em;
-        box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-        src = ".\images\img-path-tracing\rst_dir.png" 
-        width = "50%">
-    <br>
-    <div style = "
-        color: orange;
-        border-bottom: 1px solid #d9d9d9;
-        display: inline-block;
-        color: #999;
-        padding: 2px;">
-        Figure 1: Only direct light
-    </div>
-    <p> </p>
-</center>
+<img src="./images/img-path-tracing/rst_dir.png" style="zoom:50%;" />
+<center><p>Figure 1: Only direct light</p></center>    
 
-<center>
-    <img style = "
-        border-radius: 0.3125em;
-        box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-        src = ".\images\img-path-tracing\rst_full.png" 
-        width = "50%">
-    <br>
-    <div style = "
-        color: orange;
-        border-bottom: 1px solid #d9d9d9;
-        display: inline-block;
-        color: #999;
-        padding: 2px;">
-        Figure 2: Full light
-    </div>
-    <p> </p>
-</center>
 
-<center>
-    <img style = "
-        border-radius: 0.3125em;
-        box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-        src = ".\images\img-path-tracing\rst_full_impSamp.png" 
-        width = "50%">
-    <br>
-    <div style = "
-        color: orange;
-        border-bottom: 1px solid #d9d9d9;
-        display: inline-block;
-        color: #999;
-        padding: 2px;">
-        Figure 3: Full light by important sampling
-    </div>
-    <p> </p>
-</center>
+<img src="./images/img-path-tracing/rst_full.png" style="zoom:50%;" />
+<center><p>Figure 2: Global Illumination</p></center>   
 
-<center>
-    <img style = "
-        border-radius: 0.3125em;
-        box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-        src = ".\images\img-path-tracing\rst_high_spp.png" 
-        width = "50%">
-    <br>
-    <div style = "
-        color: orange;
-        border-bottom: 1px solid #d9d9d9;
-        display: inline-block;
-        color: #999;
-        padding: 2px;">
-        Figure 4: Full light in high spp
-    </div>
-    <p> </p>
-</center>
+<img src="./images/img-path-tracing/rst_full_impSamp.png" style="zoom:50%;" />
+<center><p>Figure 3: Global Illumination by important sampling</p></center>  
+
+<img src="./images/img-path-tracing/rst_high_spp.png" style="zoom:50%;" />
+<center><p>Figure 4: Global Illumination with high spp</p></center>  
+
+
 ## Reference
 
 [1] [Framework](https://github.com/Ubpa/USTC_CG/tree/master/Homeworks/9_PathTracing)
