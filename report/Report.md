@@ -410,7 +410,7 @@ $$
         display: inline-block;
         color: #999;
         padding: 2px;">
-        Figure 6: Full light
+        Figure 6: Global Illumination
     </div>
     <p> </p>
 </center>
@@ -433,10 +433,11 @@ $$
         display: inline-block;
         color: #999;
         padding: 2px;">
-        Figure 7: Full light by important sampling
+        Figure 7: Global Illumination by important sampling
     </div>
     <p> </p>
 </center>
+
 结果分析：当对环境光照进行重要性采样时，图像的噪点有所下降，而图像的阴影展现的更好
 
 ## 3.2 高spp
@@ -456,10 +457,11 @@ $$
         display: inline-block;
         color: #999;
         padding: 2px;">
-        Figure 8: Full light in high spp
+        Figure 8: Global Illumination with high spp
     </div>
     <p> </p>
 </center>
+
 结果分析：当增多追踪的光学个数后，场景已经十分逼真了，成功的渲染出图像
 
 ## 4 Summary
