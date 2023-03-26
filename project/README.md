@@ -44,7 +44,7 @@ cmake configure 后，执行以下操作
 
 - CMake 3.16.3 及以上
 
-- glfw3（作业 8 已安装）
+- glfw3
 
   > 用 CMake 安装 [glfw3](https://github.com/glfw/glfw) 
   >
