@@ -1,4 +1,4 @@
-# 9. Ray Tracing
+# Ray Tracing
 
 > Rainzor
 
