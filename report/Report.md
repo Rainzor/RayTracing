@@ -59,6 +59,7 @@ L _ {o}(\pmb{p},\pmb{\omega} _ {o})=L _ {e}(\pmb{p},\pmb{\omega} _ {o})+L _ {r}(
 $$
 
 由于 $L _ {e}(\pmb{p},\pmb{\omega} _ {o})$ 是物体自发光强度，可以作为已知量，我们假设除了光源外，其他物体不会自发光，所以只要重点关注反射光强 $L _ {r}(\pmb{p},\pmb{\omega} _ {o})$ 即可，即设
+
 $$
 L _ {o}(\pmb{p},\pmb{\omega} _ {o})=L _ {r}(\pmb{p},\pmb{\omega} _ {o})\tag{3}
 $$
@@ -111,18 +112,23 @@ $$
 > 注：图中 $\pmb{x}$ 即为 $\pmb{p}$，$\pmb{y}$ 即为 $\pmb{p}^\prime$ 
 
 如果我们只是在原光照点 $\pmb{p}$ 处积分，我们采样的是半球上立体角，这样会有大量的方向的光学被浪费。所以我们应该直接在光源所在区域上积分，即积分限：从半球变成了光源的表面积！
+
 $$
 L _ {\text{dir}}(\pmb{p},\pmb{\omega} _ {o})=L _ {\text{dir}}(\pmb{x}\to\pmb{z})=\int _ A f _ {r}(\pmb{y}\to \pmb{x}\to\pmb{z})L _ {e}(\pmb{y}\to\pmb{x})G(\pmb{x}\leftrightarrow\pmb{y})\mathbb{d}A(\pmb{y})\tag6
 $$
+
 其中积分域 $A$ 为场景中所有的面积，但只有光源处 $L _ {e}(\pmb{y}\to\pmb{x})\neq 0$ 
 
 根据**Mento Carlo 积分法**，得到
+
 $$
 L _ {\text{dir}}(\pmb{x}\to\pmb{z})=\sum _ {A(i,j)}\frac{ f _ {r}(\pmb{y}\to \pmb{x}\to\pmb{z})L _ {e}(\pmb{y}\to\pmb{x})G(\pmb{x}\leftrightarrow\pmb{y})}{p(i,j)}\tag7
 $$
+
 其中 $p(i,j)$ 是对光源区域 $A$ 处的**均匀采样**。
 
 由(5)、(6)式积分变换得：
+
 $$
 \mathbb{d}\pmb{\omega} _ {i}=\frac{|\cos\theta _ {\pmb{y},\pmb{x}}|}{\|\pmb{x}-\pmb{y}\|^2}\mathbb{d}A(\pmb{y})
 $$
@@ -171,10 +177,13 @@ $$
 </center>
 
 所谓重要采样，即选择的抽样概率密度大致符合待抽样的分布，对于给定的环境光贴图，设采样为像素点 $\pmb{y}=(i,j)$,那么该点的概率为 $p _ {img}(i,j)$
+
 $$
 p_{img}(i,j)=\frac{L_e(i,j)}{\sum_{k,l}L_e(k,l)}\tag8
 $$
+
 相关概率关系如下
+
 $$
 \begin{aligned}
 1=\int _ {I}p _ {\text{img}}(i,j)\mathbb{d}i\mathbb{d}j
@@ -185,8 +194,8 @@ $$
 \end{aligned}
 $$
 
-
 其中根据 *Figure 2* 以及环境贴图对应关系得
+
 $$
 \begin{align}
 &\left|\frac{\mathrm{d}\pmb{\omega} _ {i}}{\mathrm{d}A}\right|=\frac{|\cos\theta _ {o}|}{\|\pmb{x}-\pmb{y}\|^2}=\frac{1}{R^2}\\
@@ -194,6 +203,7 @@ $$
 &\left|\frac{\partial(i,j)}{\partial(\theta,\phi)}\right|=\frac{wh}{2\pi^2}
 \end{align}
 $$
+
 其中：
 
 > - $i \in [0, w]$，$w$ 是图像宽度
@@ -204,10 +214,13 @@ $$
 > - $\pmb{\omega} _ i=(\sin\theta\sin\phi,\cos\theta,\sin\theta\cos\phi)$ 
 
 所以
+
 $$
 p(\pmb{\omega} _ {i})=\frac{wh}{2\pi^2\sin\theta}p _ {\text{img}}(i,j)\tag9
 $$
+
 此时 *equation 6*可改写为：
+
 $$
 \begin{aligned}
 L _ {\text{dir}}(\pmb{p},\pmb{\omega} _ {o})&=\int _ A f _ {r}(\pmb{y}\to \pmb{x}\to\pmb{z})L _ {e}(\pmb{y}\to\pmb{x})G(\pmb{x}\leftrightarrow\pmb{y})\mathbb{d}A(\pmb{y})
@@ -216,6 +229,7 @@ L _ {\text{dir}}(\pmb{p},\pmb{\omega} _ {o})&=\int _ A f _ {r}(\pmb{y}\to \pmb{x
 \\&=\sum_{I_{i,j}}\frac{ f _ {r}(\pmb{p},\pmb{\omega} _ {i},\pmb{\omega} _ {o})L_e(\pmb{p},\pmb{\omega} _ {i})\cos\theta _ {\pmb{\omega} _ {i},\pmb{n}(\pmb{p})}}{p _ {\text{img}}(i,j)}\times \frac{2\pi^2\sin\theta}{wh}
 \end{aligned}\tag{10}
 $$
+
 其中求和是按照重要性采样得到的分布 $p _ {img}(i,j) $ 去离散采样。
 
 #### Alias Method
@@ -253,6 +267,7 @@ $$
 ### 2.3.1 间接光照方程
 
 除了要计算直接光照以外，还要计算**间接光照**
+
 $$
 \begin{aligned}
 L _ {\text{indir}}(\pmb{p},\pmb{\omega} _ {o})
@@ -393,6 +408,7 @@ $$
 ### 3.1.2 全局光照
 
 现在我们加上间接光照，即
+
 $$
 L_o=L_{\text{dir}}+L_{\text{indir}}
 $$
