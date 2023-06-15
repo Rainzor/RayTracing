@@ -63,6 +63,7 @@ $$
 $$
 L _ {o}(\pmb{p},\pmb{\omega} _ {o})=L _ {r}(\pmb{p},\pmb{\omega} _ {o})\tag{3}
 $$
+
 在（2）式中，反射光 $L _ {r}(\pmb{p},\pmb{\omega} _ {o})$ 实际上是来自两部分：
 
 - 来自光源的直接入射，称为**直接光**，记作 $L _ {\text{dir}}(\pmb{p},\pmb{\omega} _ {o})$；
